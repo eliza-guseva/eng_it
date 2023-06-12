@@ -1,23 +1,18 @@
-{:source-paths ["src"]
- :dependencies []
- 
- :dev-http {5000 "build/browser"}
- :nrepl {:port 8777}
- 
+;; shadow-cljs configuration
+{:source-paths
+ ["src/it_eng"
+  "src/test"]
+
+ :dependencies
+ []
+ :deps true
  :builds
-  ; https://shadow-cljs.github.io/docs/UsersGuide.html#target-node-script
- {:app {:target :node-script
-        :output-to "build/node-app.js"
-        :main server.main/-main
-        :devtools {:after-load server.main/reload!}}
-  ; https://shadow-cljs.github.io/docs/UsersGuide.html#target-node-library
-  :library {:target :node-library
-            :output-to "build/lib.js"
-            :exports {:handler library.main/handler}}
-  ; https://shadow-cljs.github.io/docs/UsersGuide.html#target-browser
-  :browser {:target :browser
-            :output-dir "build/browser"
-            :asset-path "."
-            :modules {:browser-main {:entries [browser.main]
-                                     :init-fn browser.main/init}}
-            :build-hooks [(_build_hooks.browser/copy-index)]}}}
+ {:app
+  {:target :browser
+   :output-dir "public/js"
+   :asset-path "/js"
+   :modules {:main {:entries [it-eng.core]
+                    :init-fn it-eng.core/init
+                    :devtools {:after-load it-eng.core/re-render}}}
+   :devtools {:http-root "public"
+              :http-port 3000}}}}
