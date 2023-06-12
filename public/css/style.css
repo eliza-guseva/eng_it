@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;400&family=Tilt+Prism&display=swap');
+
+:root {
+    --bg-dark: #e8e8dc;
+    --bg-highlight: #e8e595;
+  }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-highlight);
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+}
+
+.body-div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    border: 1px solid #030303;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    background-color: #e8e8dc;
+    color: #000000;
+    height: 5em;
+    border: 1px solid #030303;
+}
+
+.sidebar {
+    position: relative;
+    background-color: var(--bg-dark);
+    color: #c37878;
+    width: 15%;
+    border: 1px solid #261fab;
+    height: 100%;
+    z-index: 40;
+    margin: 10px;
+  }
+
+.main {
+    position: relative;
+    padding-top: 12px;
+    background-color: var(--bg-highlight);
+    border: 1px solid #bc0b0b;
+    width: 85%;
+    justify-content: center;
+    justify-items: center;
+    left: 3%;
+  }
+
+/* footer */
+footer {
+    padding: 0.2em 2.5em;
+    text-align: center;
+    background-color: var(--bg-dark);
+    text-transform: uppercase   ;
+    font-weight: 100;
+    color: #080808;
+    font-size: 1.5em;
+    font-family: "Cabin Sketch";
+    }
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Josefin Slab';
+    margin: 3.1vh auto;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    }
+
+.subtitle {
+    font-family: 'Josefin Slab', serif;
+    font-size: 22px;
+    width: 40%;
+    margin: 15px auto;
+    line-height: 1.2;
+    text-align: justify;
+    }
+
+.any-text {
+    font-family: 'Josefin Slab', serif;
+    font-size: 22px;
+    width: 100%;
+    margin: 15px auto;
+    line-height: 1.2;
+    background-color: rgb(195, 193, 212);
+    border: 3px solid rgb(129, 141, 164);
+    border-radius: 8px;
+    }

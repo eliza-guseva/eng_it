@@ -1,14 +1,16 @@
 (ns it-eng.core
   (:require ["react-dom/client" :refer [createRoot]]
             [goog.dom :as gdom]
-            [reagent.core :as r]))
+            [reagent.core :as r]
+            [it-eng.it-eng.ui.header :refer [header]]
+            [it-eng.it-eng.ui.sidebar :refer [sidebar]]
+             [it-eng.it-eng.ui.main :refer [main]]))
 
 (defn app []
   [:main.app
-   [:div  {:class "container"}
-    [:div {:class "row"}
-     [:div {:class "col-md-12"}
-      [:h1 "Hello, world!"]]]]])
+   [:div  [header]]
+   [:div.body-div
+    [sidebar] [main]]])
 
 
 (defonce root (createRoot (gdom/getElement "app")))
