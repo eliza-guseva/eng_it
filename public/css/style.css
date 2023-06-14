@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;400&family=Tilt+Prism&display=swap');
 
 :root {
-    --bg-dark: #5b5b5b;
-    --bg-highlight: #787777;
+    --bg-dark: #12428a;
+    --bg-highlight: #bcd4f8;
   }
 
 html,
@@ -21,7 +21,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-highlight);
 }
 
 .body-div {
@@ -39,21 +39,37 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(0deg, #787777 0%, #5b5b5b 100%);
+    background: linear-gradient(0deg, #7cb8f0 0%, #6c9ef5 100%);
     align-items: center;
     padding: 0 1em;
-    height: 10%;
+    height: 22%;
     border: 1px solid #030303;
+}
+
+.image-headline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: left;
+    width: 100%;
+    height: 20em;
+    background-color: aliceblue;
+}
+
+.header-img {
+    height: 20em;
 }
 
 .navbar-nav {
     display: flex;
     flex-direction: row;
+    font-size: larger;
 }
 
 ul {
     display: flex;
-    gap: 1em;
+    gap: 3em;
 }
 
 li {
@@ -65,12 +81,49 @@ li {
     position: relative;
     padding-top: 12px;
     /* vertical double gradient background */
-    background: linear-gradient(180deg, #787777 0%, #5b5b5b 100%);
+    background: linear-gradient(180deg, #7cb8f0 0%, #6c9ef5 100%);
     border: 1px solid #330707;
     width: 100%;
     justify-content: center;
     justify-items: center;
   }
+
+.why-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 20em;
+    background-color: #7cb8f0;
+}
+
+.why-us-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 20em;
+    background-color: #7cb8f0;
+}
+
+.whyus-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 15em;
+    height: 10em;
+    background-color: aliceblue;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* footer */
 footer {
@@ -111,7 +164,5 @@ h1, h2 {
     width: 100%;
     margin: 15px auto;
     line-height: 1.2;
-    background-color: rgb(195, 193, 212);
-    border: 3px solid rgb(129, 141, 164);
     border-radius: 8px;
     }
