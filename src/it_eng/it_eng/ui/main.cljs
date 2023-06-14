@@ -17,12 +17,12 @@
   [:div1.whyus-div [:p main-content/whyus1]]
   [:div2.whyus-div [:p main-content/whyus2]]
   [:div3.whyus-div [:p main-content/whyus3]]
-  [:div4.whyus-div [:p main-content/whyus4]]]]
+  [:div4.whyus-div [:p main-content/whyus4]]]
   [:div.why-us-cards
    [:div5.whyus-div [:p main-content/whyus5]]
   [:div6.whyus-div [:p main-content/whyus6]]
   [:div7.whyus-div [:p main-content/whyus7]]
-  [:div8.whyus-div [:p main-content/whyus8]]]
+  [:div8.whyus-div [:p main-content/whyus8]]]]
   )
 
 (defn main []
