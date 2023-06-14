@@ -14,5 +14,5 @@
    :modules {:main {:entries [it-eng.core]
                     :init-fn it-eng.core/init
                     :devtools {:after-load it-eng.core/re-render}}}
-   :devtools {:http-root "public"
+   :devtools {:http-root "/"
               :http-port 3000}}}}
