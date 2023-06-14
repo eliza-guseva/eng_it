@@ -3,7 +3,6 @@
             [goog.dom :as gdom]
             [reagent.core :as r]
             [it-eng.it-eng.ui.header :refer [header]]
-            [it-eng.it-eng.ui.sidebar :refer [sidebar]]
              [it-eng.it-eng.ui.main :refer [main]]))
 
 (defn app []
