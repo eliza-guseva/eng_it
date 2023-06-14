@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;400&family=Tilt+Prism&display=swap');
 
 :root {
-    --bg-dark: #e8e8dc;
-    --bg-highlight: #e8e595;
+    --bg-dark: #5b5b5b;
+    --bg-highlight: #787777;
   }
 
 html,
@@ -13,6 +13,7 @@ body {
   padding: 0;
   background-color: var(--bg-highlight);
 }
+
 .app {
     display: flex;
     flex-direction: column;
@@ -25,45 +26,50 @@ body {
 
 .body-div {
     display: flex;
+    align-content: center;
     flex-direction: row;
     position: relative;
     flex-direction: row;
     height: 100%;
-    border: 1px solid #030303;
+    border: 1px solid #070606;
 }
 
 
 .page-header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    background: linear-gradient(0deg, #787777 0%, #5b5b5b 100%);
     align-items: center;
     padding: 0 1em;
-    background-color: #e8e8dc;
-    color: #000000;
-    height: 5em;
+    height: 10%;
     border: 1px solid #030303;
 }
 
-.sidebar {
-    position: relative;
-    background-color: var(--bg-dark);
-    color: #c37878;
-    width: 15%;
-    border: 1px solid #261fab;
-    height: 100%;
-    z-index: 40;
-    margin: 10px;
-  }
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    gap: 1em;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
 
 .main {
     position: relative;
     padding-top: 12px;
-    background-color: var(--bg-highlight);
-    border: 1px solid #bc0b0b;
-    width: 85%;
+    /* vertical double gradient background */
+    background: linear-gradient(180deg, #787777 0%, #5b5b5b 100%);
+    border: 1px solid #330707;
+    width: 100%;
     justify-content: center;
     justify-items: center;
-    left: 3%;
   }
 
 /* footer */
@@ -78,9 +84,8 @@ footer {
     font-family: "Cabin Sketch";
     }
 
-h1 {
+h1, h2 {
     text-align: center;
-    font-size: 4rem;
     font-family: 'Josefin Slab';
     margin: 3.1vh auto;
     font-style: normal;

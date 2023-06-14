@@ -10,7 +10,7 @@
   [:main.app
    [:div  [header]]
    [:div.body-div
-    [sidebar] [main]]])
+    [main]]])
 
 
 (defonce root (createRoot (gdom/getElement "app")))
