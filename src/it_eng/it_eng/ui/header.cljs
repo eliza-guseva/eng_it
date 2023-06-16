@@ -6,7 +6,7 @@
 (defn title []
     [:div.head-title-text
     [:h1.head-text-top "The Language"]
-    [:h1.head-text-bottom "of Techonology"]]
+    [:h1.head-text-bottom "of Technology"]]
   )
 
 (defn section-title []
