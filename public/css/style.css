@@ -109,7 +109,7 @@ li.nav-item {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    background-image: url("images/back1-office.jpg");
+    background-image: url("https://eliza-guseva.github.io/eng_it/images/back1-office.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: lighten;
