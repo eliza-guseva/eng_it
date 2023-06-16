@@ -7,9 +7,8 @@
 
 (defn app []
   [:main.app
-   [:div  [header]]
-   [:div.body-div
-    [main]]])
+   [header]
+    [main]])
 
 
 (defonce root (createRoot (gdom/getElement "app")))
