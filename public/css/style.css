@@ -85,7 +85,7 @@ html, body {
     justify-content: flex-start ;
     margin: 0em;
     height: 28vh;
-    gap: 0.4em;
+    gap: 0.1em;
     align-items: stretch;
     padding-top: 0em;
 }
@@ -93,6 +93,8 @@ html, body {
 li.nav-item {
     text-decoration: none;
     list-style: none;
+    background-color: black;
+    color: #FFFFFF;
 }
 
 .main {
@@ -107,13 +109,17 @@ li.nav-item {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
+    background-image: url("/images/back1-office.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
 }
 
 .whyus-toprow {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
 }
 
 .whyus-top1 {
@@ -121,8 +127,21 @@ li.nav-item {
     text-align: justify;
     font-size: 1.5em;
     margin: 2em;
-    border: 3px black;
+    padding: 0.5em;
+    border: 3px solid black;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+}
 
+.whyus-top3 {
+    width: 15em;
+    text-align: justify;
+    font-size: 1.5em;
+    margin-right: 2em;
+    border: 3px black;
+    border-radius: 1em;
+    border: 3px solid black;
+    border-radius: 1em;
 }
 
 .whyus-header {
@@ -130,6 +149,17 @@ li.nav-item {
     align-self: flex-start;
     justify-self: center;
     margin: 2em;
-    font-size: 1.5em;
+    margin-right: 3em;
+    font-size: 1.6em;
+}
+
+h1.whyus-header {
+    margin: 0px;
+}
+
+.whyus-bottomrow {
+    display: flex;
+    flex-direction: row;
+    
 }
 
