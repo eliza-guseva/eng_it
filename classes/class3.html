@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .question-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+        .question-container input[type="text"] {
+            font-size: 1.1em;
+            padding: 5px;
+            margin-left: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .answer {
+            display: none;
+            color: green;
+            font-size: 1.1em;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Exercises</h1>
+
+<h2>1. Fill the blanks</h2>
+
+<div class="question-container">
+    <p><strong>Question:</strong> What do you think is the main <input type="text" id="q1" class="input"> in our server response time?</p>
+    <p><strong>Answer:</strong> The slow database queries are creating a significant slowdown in our application.</p>
+    <p><span class="answer" id="a1">factor, bottleneck</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> What steps can we take to make our data encryption work better?</p>
+    <p><strong>Answer:</strong> By using modern algorithms, we can achieve more <input type="text" id="q2" class="input"> encryption.</p>
+    <p><span class="answer" id="a2">efficient, secure</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> Has the new firewall improved our security <input type="text" id="q3" class="input">?</p>
+    <p><strong>Answer:</strong> Yes, it has reduced the number of unauthorized access attempts by a factor of ten.</p>
+    <p><span class="answer" id="a3">significantly</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> Is there a problem with sharing too much data on our platform?</p>
+    <p><strong>Answer:</strong> Yes, <input type="text" id="q4" class="input"> data sharing can lead to privacy violations and security risks.</p>
+    <p><span class="answer" id="a4">excessive</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> Do you often have issues with network latency during peak hours?</p>
+    <p><strong>Answer:</strong> Yes, I <input type="text" id="q5" class="input"> to maintain a stable connection when traffic is high.</p>
+    <p><span class="answer" id="a5">struggle</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> Will investing in cybersecurity training <input type="text" id="q6" class="input"> in the long run?</p>
+    <p><strong>Answer:</strong> Yes, it will help us prevent data breaches and other security incidents.</p>
+    <p><span class="answer" id="a6">pay off, help us</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> Do we need to <input type="text" id="q7" class="input"> into updating our security protocols?</p>
+    <p><strong>Answer:</strong> Yes, we should always stay ahead of potential threats.</p>
+    <p><span class="answer" id="a7">put effort, look, invest</span></p>
+</div>
+
+<div class="question-container">
+    <p><strong>Question:</strong> How long does it take to <input type="text" id="q8" class="input"> a secure server environment?</p>
+    <p><strong>Answer:</strong> It depends on the complexity of the system and the level of security required.</p>
+    <p><span class="answer" id="a8">set up</span></p>
+</div>
+
+<h2>2. Fill the blanks</h2>
+
+<div class="question-container">
+    <p>During a project, we encountered an <input type="text" id="q9" class="input"> that prevented our application from scaling properly. 
+       To <input type="text" id="q10" class="input"> it, we decided to <input type="text" id="q11" class="input"> some of the existing configurations to improve performance. 
+       However, we realized that this solution could be a <input type="text" id="q12" class="input">, as making changes might introduce new <input type="text" id="q13" class="input"> in the long run. 
+       Careful planning and testing were <input type="text" id="q14" class="input"> to ensure the application remained stable as we made these adjustments.
+    </p>
+    <p><strong>Answers:</strong> 
+        <p><span class="answer" id="a9">issue, obstacle</span>,    </p>
+        <p><span class="answer" id="a10">resolve, deal with</span>,</p> 
+        <p><span class="answer" id="a11">tweak</span>, </p>
+        <p><span class="answer" id="a12">double-edged sword</span>,</p> 
+        <p><span class="answer" id="a13">problems</span>, </p>
+        <p><span class="answer" id="a14">essential</span></p>
+    </p>
+</div>
+
+<script>
+    document.querySelectorAll('.input').forEach(input => {
+        input.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const answerId = 'a' + this.id.slice(1);
+                const correctAnswer = document.getElementById(answerId).innerText.trim().toLowerCase();
+                // split correctAnswer by ', ' to handle multiple correct answers
+                const correctAnswers = correctAnswer.split(', ');
+                const userInput = this.value.trim().toLowerCase();
+                
+                if (correctAnswers.includes(userInput)) {
+                    this.classList.add('correct');
+                    this.classList.remove('incorrect');
+                } else {
+                    this.classList.add('incorrect');
+                    this.classList.remove('correct');
+                }
+                
+                document.getElementById(answerId).style.display = 'inline';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
